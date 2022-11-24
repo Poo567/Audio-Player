@@ -10,9 +10,11 @@ class Window(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Audio Player")
+
         self.setFixedHeight(450)
         self.setFixedWidth(305)
         self.setStyleSheet('background-color:#25503d')
+        self.setWindowIcon(QIcon('icon.png'))
         self.make_widget()
 
     def make_widget(self):
@@ -91,8 +93,8 @@ class Window(QWidget):
         self.text_label.move(55, 30)
         self.text_label.setMinimumSize(195, 30)
         self.text_label.setWordWrap(True)
-        self.text_label.setStyleSheet("background-color : #4aa17c;"
-                                      "border:1px solid")
+        self.text_label.setStyleSheet("background-color : #4aa17c;")
+
         self.text_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         # Initialize Mixer
